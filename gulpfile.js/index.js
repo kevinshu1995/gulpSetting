@@ -22,7 +22,7 @@ function copyFile() {
 
 function layoutHTML() {
   return gulp.src(envOptions.html.pugSrc)
-    // .pipe($.plumber())
+    .pipe($.plumber())
     // .pipe($.frontMatter())
     // .pipe(
     //   $.layout((file) => {

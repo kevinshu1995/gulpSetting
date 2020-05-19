@@ -14,6 +14,8 @@ let envOptions = {
       `!${srcPath}/assets/style/**/*.scss`,
       `!${srcPath}/assets/style/**/*.sass`,
       // `!${srcPath}/**/*.ejs`,
+      `!${srcPath}/*.pug`,
+      `!${srcPath}/modules`,
       `!${srcPath}/**/*.pug`,
       `!${srcPath}/**/*.html`,
     ],
@@ -28,6 +30,7 @@ let envOptions = {
     // ],
     pugSrc: [
       `${srcPath}/**/*.pug`,
+      `!${srcPath}/modules/*.pug`,
     ],
     path: distPath,
   },
