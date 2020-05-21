@@ -22,13 +22,7 @@ function copyFile() {
 
 function layoutHTML() {
   return gulp.src(envOptions.html.pugSrc)
-    .pipe($.plumber())
-    // .pipe($.frontMatter())
-    // .pipe(
-    //   $.layout((file) => {
-    //     return file.frontMatter;
-    //   })
-    // )
+    // .pipe($.plumber())
     .pipe(pug({
       pretty: true                  //使用 pipe連接任務，經過 pug 的美化程式碼處理後
     }))

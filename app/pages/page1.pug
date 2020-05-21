@@ -1,5 +1,11 @@
 extend ./../modules/layout.pug
 
+block append head
+    title document - page
+    link(rel="stylesheet", href="../assets/style/all.css")
+    link(rel="stylesheet", href="../assets/js/all.js")
+    link(rel="stylesheet", href="../assets/js/vendors.js")
+
 block content
     div page1~~~~~~
 block footer
