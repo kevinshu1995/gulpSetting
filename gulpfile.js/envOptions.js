@@ -13,10 +13,7 @@ let envOptions = {
       `!${srcPath}/assets/js/**/*.js`,
       `!${srcPath}/assets/style/**/*.scss`,
       `!${srcPath}/assets/style/**/*.sass`,
-      // `!${srcPath}/**/*.ejs`,
-      `!${srcPath}/*.pug`,
-      `!${srcPath}/modules`,
-      `!${srcPath}/**/*.pug`,
+      `!${srcPath}/**/*.ejs`,
       `!${srcPath}/**/*.html`,
     ],
     path: distPath,
@@ -25,12 +22,8 @@ let envOptions = {
     src: [
       `${srcPath}/**/*.html`,
     ],
-    // ejsSrc: [
-    //   `${srcPath}/**/*.ejs`,
-    // ],
-    pugSrc: [
-      `${srcPath}/**/*.pug`,
-      `!${srcPath}/modules/*.pug`,
+    ejsSrc: [
+      `${srcPath}/**/*.ejs`,
     ],
     path: distPath,
   },

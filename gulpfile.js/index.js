@@ -4,7 +4,6 @@ const autoprefixer = require('autoprefixer');
 const minimist = require('minimist');
 const browserSync = require('browser-sync').create();
 const { envOptions } = require('./envOptions');
-const pug = require('gulp-pug'); //載入 gulp-pug
 
 let options = minimist(process.argv.slice(2), envOptions);
 //現在開發狀態
@@ -21,11 +20,14 @@ function copyFile() {
 }
 
 function layoutHTML() {
-  return gulp.src(envOptions.html.pugSrc)
-    // .pipe($.plumber())
-    .pipe(pug({
-      pretty: true                  //使用 pipe連接任務，經過 pug 的美化程式碼處理後
-    }))
+  return gulp.src(envOptions.html.src)
+    .pipe($.plumber())
+    .pipe($.frontMatter())
+    .pipe(
+      $.layout((file) => {
+        return file.frontMatter;
+      })
+    )
     .pipe(gulp.dest(envOptions.html.path))
     .pipe(
       browserSync.reload({
@@ -98,8 +100,7 @@ function deploy() {
 
 function watch() {
   gulp.watch(envOptions.html.src, gulp.series(layoutHTML));
-  // gulp.watch(envOptions.html.ejsSrc, gulp.series(layoutHTML));
-  gulp.watch(envOptions.html.pugSrc, gulp.series(layoutHTML));
+  gulp.watch(envOptions.html.ejsSrc, gulp.series(layoutHTML));
   gulp.watch(envOptions.javascript.src, gulp.series(babel));
   gulp.watch(envOptions.img.src, gulp.series(copyFile));
   gulp.watch(envOptions.style.src, gulp.series(sass));
