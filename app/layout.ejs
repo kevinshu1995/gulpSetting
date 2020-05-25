@@ -10,15 +10,9 @@
 </head>
 
 <body>
-  <header class="header">
-    這是 header
-  </header>
-
+  <%- include('modules/header.ejs'); -%>
   <%- contents %>
-
-  <footer class="footer">
-    footer
-  </footer>
+  <%- include('modules/footer.ejs'); -%>
   <script src="./assets/js/vendors.js"></script>
   <script src="./assets/js/all.js"></script>
 </body>

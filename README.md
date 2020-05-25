@@ -38,3 +38,5 @@ git push -u origin master // 僅限第一次輸入，往後只需要輸入 git p
 ## 初始設定
 1. 在終端機安裝 gulp，繼續輸入指令 npm i gulp@4 -g 按 Enter 安裝，輸入 gulp -v 查詢是否有回報版本號。
 2. 輸入指令 npm install 安裝插件
+
+## JS concat 已取消

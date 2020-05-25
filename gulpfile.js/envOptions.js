@@ -14,6 +14,7 @@ let envOptions = {
       `!${srcPath}/assets/style/**/*.scss`,
       `!${srcPath}/assets/style/**/*.sass`,
       `!${srcPath}/**/*.ejs`,
+      `!${srcPath}/modules`,
       `!${srcPath}/**/*.html`,
     ],
     path: distPath,
