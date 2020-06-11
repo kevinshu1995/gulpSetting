@@ -32,6 +32,9 @@ let envOptions = {
       `${srcPath}/**/*.pug`,
       `!${srcPath}/modules/*.pug`,
     ],
+    pugWatchSrc: [
+      `${srcPath}/**/*.pug`,
+    ],
     path: distPath,
   },
   style: {

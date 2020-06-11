@@ -99,7 +99,7 @@ function deploy() {
 function watch() {
   gulp.watch(envOptions.html.src, gulp.series(layoutHTML));
   // gulp.watch(envOptions.html.ejsSrc, gulp.series(layoutHTML));
-  gulp.watch(envOptions.html.pugSrc, gulp.series(layoutHTML));
+  gulp.watch(envOptions.html.pugWatchSrc, gulp.series(layoutHTML));
   gulp.watch(envOptions.javascript.src, gulp.series(babel));
   gulp.watch(envOptions.img.src, gulp.series(copyFile));
   gulp.watch(envOptions.style.src, gulp.series(sass));
